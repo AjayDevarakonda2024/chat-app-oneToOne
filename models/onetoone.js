@@ -4,7 +4,6 @@ const oneToOneSchema = new mongoose.Schema(
     {
         "sender": {type: String },
         "receiver": {type: String},
-        "reciver_message": {type: String},
         "sender_message": {type: String}
     }
 )
