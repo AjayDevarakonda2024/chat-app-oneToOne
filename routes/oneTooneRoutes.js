@@ -3,6 +3,6 @@ const controller = require("../controllers/oneToOneControllers")
 const router = express.Router()
 router.get("/", controller.getAllonetoones)
 router.post("/", controller.saveNewoneToOne)
-router.delete("/:sno", controller.deleteOnToOne)
-router.put("/:sno", controller.updateOneToOne)
+router.delete("/:id", controller.deleteOnToOne)
+router.put("/:id", controller.updateOneToOne)
 module.exports = router;

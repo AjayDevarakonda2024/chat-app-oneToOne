@@ -23,7 +23,7 @@ exports.saveNewoneToOne = async (req, res)=>{
 
 exports.deleteOnToOne = async (req, res) => {
     try{
-        let deleted = await oneToOne.findOneAndDelete({"sender": req.params.sender});
+        let deleted = await oneToOne.findOneAndDelete({"_id": req.params.id});
         if(!deleted){
             res.status(400).json({"message" : "oneToOne not deleted !!"})
         }
@@ -38,7 +38,7 @@ exports.deleteOnToOne = async (req, res) => {
 
 exports.updateOneToOne = async (req, res) => {
     try{
-        let updated = await oneToOne.findOneAndUpdate({"sender": req.params.sender}, req.body);
+        let updated = await oneToOne.findOneAndUpdate({"_id": req.params.id}, req.body);
         if(!updated){
             res.status(400).json({"message" : "oneToOne not updated !!"})
         }
